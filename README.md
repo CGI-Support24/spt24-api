@@ -12,6 +12,7 @@
 <br>
 http://localhost:3003/ <br>
 으로 접속해서 확인!
+<br>
 # VSCode 터미널에서 스크립트 실행 안될때(보안오류)
 1. Windows PowerShell 관리자권한으로 실행
 2. Set-ExecutionPolicy RemoteSigned
