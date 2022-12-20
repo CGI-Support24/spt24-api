@@ -17,10 +17,12 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forRootAsync({ useFactory: orm_config_1.ormConfig }),
+        imports: [
+            typeorm_1.TypeOrmModule.forRootAsync({ useFactory: orm_config_1.ormConfig }),
             config_1.ConfigModule.forRoot({
                 isGlobal: true
-            })],
+            })
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

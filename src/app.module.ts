@@ -6,7 +6,8 @@ import { ormConfig } from './orm.config';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
+  imports: [
+    TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
     ConfigModule.forRoot({
       isGlobal: true
     })],
