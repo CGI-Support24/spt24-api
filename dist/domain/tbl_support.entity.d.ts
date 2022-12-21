@@ -6,8 +6,9 @@ export declare class tbl_support {
     sp_size: string;
     sp_startat: Date;
     sp_finishat: Date;
-    sp_qualification: string;
+    sp_qualification: number;
     sp_url: string;
+    sp_src: string;
     admin_id: string;
     member: tbl_member | null;
 }

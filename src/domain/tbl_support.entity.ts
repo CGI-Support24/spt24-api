@@ -16,17 +16,20 @@ export class tbl_support {
     @Column('varchar', { name: 'sp_size', length: 40 })
     sp_size: string;
 
-    @Column('varchar', { name: 'sp_startat'})
+    @Column( { type: Date, name: 'sp_startat'})
     sp_startat: Date;
     
-    @Column('varchar', { name: 'sp_finishat'})
+    @Column( { type: Date, name: 'sp_finishat'})
     sp_finishat: Date;
 
-    @Column('varchar', { name: 'sp_qualification', length: 4000 })
-    sp_qualification: string;
+    @Column( { type: 'int',name: 'sp_qualification' })
+    sp_qualification: number;
 
     @Column('varchar', { name: 'sp_url', length: 400 })
     sp_url: string;    
+
+    @Column('varchar', { name: 'sp_src', length: 400 })
+    sp_src: string;   
 
     @Column('varchar', { name: 'admin_id', length: 20 })
     admin_id: string;
