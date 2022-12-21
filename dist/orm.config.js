@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ormConfig = void 0;
 function ormConfig() {
     const commonConf = {
-        SYNCRONIZE: true,
+        SYNCRONIZE: false,
         ENTITIES: [__dirname + '/domain/*.entity{.ts,.js}'],
         MIGRATIONS: [__dirname + '/migrations/**/*{.ts,.js}'],
         MIGRATIONS_RUN: false,
