@@ -17,6 +17,9 @@ export class tbl_member {
     @Column('varchar', { name: 'mb_email', length: 40 })
     mb_email: string;
 
+    @Column( { type: 'int', name: 'mb_gender' })
+    mb_gender: number;
+
     @OneToMany(()=>tbl_site, (site)=>site.admin_id)
     site: tbl_site[] | null
 
