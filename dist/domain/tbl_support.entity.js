@@ -31,21 +31,25 @@ __decorate([
     __metadata("design:type", String)
 ], tbl_support.prototype, "sp_size", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'sp_startat' }),
+    (0, typeorm_1.Column)({ type: Date, name: 'sp_startat' }),
     __metadata("design:type", Date)
 ], tbl_support.prototype, "sp_startat", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'sp_finishat' }),
+    (0, typeorm_1.Column)({ type: Date, name: 'sp_finishat' }),
     __metadata("design:type", Date)
 ], tbl_support.prototype, "sp_finishat", void 0);
 __decorate([
-    (0, typeorm_1.Column)('varchar', { name: 'sp_qualification', length: 4000 }),
-    __metadata("design:type", String)
+    (0, typeorm_1.Column)({ type: 'int', name: 'sp_qualification' }),
+    __metadata("design:type", Number)
 ], tbl_support.prototype, "sp_qualification", void 0);
 __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'sp_url', length: 400 }),
     __metadata("design:type", String)
 ], tbl_support.prototype, "sp_url", void 0);
+__decorate([
+    (0, typeorm_1.Column)('varchar', { name: 'sp_url', length: 400 }),
+    __metadata("design:type", String)
+], tbl_support.prototype, "sp_src", void 0);
 __decorate([
     (0, typeorm_1.Column)('varchar', { name: 'admin_id', length: 20 }),
     __metadata("design:type", String)
