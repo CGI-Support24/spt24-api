@@ -7,25 +7,31 @@ export class AdminpageService {
 
 getAll(): tbl_support[] {
     return this.supports;
-  }
+    }
 
-  getOne(seq: number): tbl_support {
+getOne(seq: number): tbl_support {
     const support = this.supports.find(support => support.sp_seq === Number(seq));
     if (!support) {
         throw new NotFoundException(`${seq} not found`);
     }
     return support;
-  }
+    }
 
-  deleteOne(seq: number): boolean {
+deleteOne(seq: number): boolean {
     this.getOne(seq);
     this.supports = this.supports.filter(support => support.sp_seq !== Number(seq));
     return true;
-  }
-  
-  update(id: number, updateData: any) {
+    }
+
+update(id: number, updateData: any) {
     const support = this.getOne(id);
     this.deleteOne(id);
     this.supports.push({ ...support, ...updateData });
-  }
+    }
+
+create(spData: any) {
+        this.supports.push({
+          ...spData
+        });
+      }
 }

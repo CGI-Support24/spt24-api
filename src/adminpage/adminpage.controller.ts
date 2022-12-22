@@ -31,4 +31,9 @@ export class AdminpageController {
         return this.adminpageService.update(sp_seq, updateData);
     }
 
+    @Post()
+  create(@Body() spData: any) {
+    return this.adminpageService.create(spData);
+  }
+
 }
