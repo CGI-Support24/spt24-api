@@ -32,7 +32,7 @@ export class AdminpageController {
     }
 
     @Post()
-  create(@Body() spData: any) {
+    create(@Body() spData: any) {
     return this.adminpageService.create(spData);
   }
 

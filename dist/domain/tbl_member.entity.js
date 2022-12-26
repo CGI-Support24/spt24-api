@@ -32,6 +32,14 @@ __decorate([
     __metadata("design:type", String)
 ], tbl_member.prototype, "mb_email", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ type: 'int', name: 'mb_gender' }),
+    __metadata("design:type", Number)
+], tbl_member.prototype, "mb_gender", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'int', name: 'mb_age' }),
+    __metadata("design:type", Number)
+], tbl_member.prototype, "mb_age", void 0);
+__decorate([
     (0, typeorm_1.OneToMany)(() => tbl_site_entity_1.tbl_site, (site) => site.admin_id),
     __metadata("design:type", Array)
 ], tbl_member.prototype, "site", void 0);

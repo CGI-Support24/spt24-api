@@ -13,6 +13,9 @@ const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
 const orm_config_1 = require("./orm.config");
 const config_1 = require("@nestjs/config");
+const adminpage_controller_1 = require("./adminpage/adminpage.controller");
+const adminpage_service_1 = require("./adminpage/adminpage.service");
+const adminpage_module_1 = require("./adminpage/adminpage.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -23,8 +26,13 @@ AppModule = __decorate([
                 isGlobal: true
             })
         ],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        controllers: [app_controller_1.AppController, adminpage_controller_1.AdminpageController],
+        providers: [app_service_1.AppService, adminpage_service_1.AdminpageService],
+    }),
+    (0, common_1.Module)({
+        imports: [adminpage_module_1.AdminpageModule],
+        controllers: [],
+        providers: []
     })
 ], AppModule);
 exports.AppModule = AppModule;

@@ -5,6 +5,8 @@ export declare class tbl_member {
     mb_pw: string;
     mb_name: string;
     mb_email: string;
+    mb_gender: number;
+    mb_age: number;
     site: tbl_site[] | null;
     support: tbl_support[] | null;
 }
