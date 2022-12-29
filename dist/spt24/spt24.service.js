@@ -6,15 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppService = void 0;
+exports.Spt24Service = void 0;
 const common_1 = require("@nestjs/common");
-let AppService = class AppService {
-    getHello() {
-        return 'Hello SUPPORT24!';
+let Spt24Service = class Spt24Service {
+    constructor() {
+        this.supports = [];
+    }
+    getAll() {
+        return this.supports;
+    }
+    getOne(sp_seq) {
+        return this.supports.find((support) => support.sp_seq === parseInt(sp_seq));
     }
 };
-AppService = __decorate([
+Spt24Service = __decorate([
     (0, common_1.Injectable)()
-], AppService);
-exports.AppService = AppService;
-//# sourceMappingURL=app.service.js.map
+], Spt24Service);
+exports.Spt24Service = Spt24Service;
+//# sourceMappingURL=spt24.service.js.map
