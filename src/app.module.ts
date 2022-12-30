@@ -1,18 +1,21 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ormConfig } from './orm.config';
-import { ConfigModule } from '@nestjs/config';
-import { Spt24Controller } from './spt24/spt24.controller';
-import { Spt24Service } from './spt24/spt24.service';
+import { BoardModule } from './board/board.module';
+import { Board } from './board/entity/board.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forRootAsync({ useFactory: ormConfig }),
-    ConfigModule.forRoot({
-      isGlobal: true,
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'project-db-stu.ddns.net',
+      port: 3307,
+      username: 'support24',
+      password: 'support24',
+      database: 'support24',
+      entities: [Board],
+      synchronize: false,
     }),
+    BoardModule,
   ],
-  controllers: [Spt24Controller],
-  providers: [Spt24Service],
 })
 export class AppModule {}
